@@ -19,7 +19,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      process.env.FRONTEND_URL || 'http://localhost:5173',
+      process.env.FRONTEND_URL || 'logbookowwa.vercel.app',
       'http://localhost:3000',
     ],
     credentials: true,

@@ -60,7 +60,7 @@ MONGO_URI=mongodb+srv://your_username:your_password@cluster0.xxxxx.mongodb.net/o
 JWT_SECRET=replace_with_a_long_random_secret_string_at_least_32_characters
 JWT_EXPIRES_IN=7d
 PORT=5000
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=logbookowwa.vercel.app
 NODE_ENV=development
 ```
 
@@ -114,17 +114,17 @@ npm run dev
 You should see:
 ```
 VITE ready
-➜  Local:   http://localhost:5173/
+➜  Local:   logbookowwa.vercel.app/
 ```
 
-Open `http://localhost:5173` in your browser.
+Open `logbookowwa.vercel.app` in your browser.
 
 ---
 
 ## 5. Try It Out
 
 ### As Admin
-1. Go to `http://localhost:5173/login`
+1. Go to `logbookowwa.vercel.app/login`
 2. Log in with `admin@owwa9.gov.ph` / `Admin@1234`
 3. You'll land on the Admin Dashboard. Explore:
    - **Pending Approvals** — approve `pedro.garcia@email.com` or `rosa.lim@email.com`
@@ -159,7 +159,7 @@ cd owwa-logbook-frontend
 npm run dev
 ```
 
-Then visit `http://localhost:5173`.
+Then visit `logbookowwa.vercel.app`.
 
 ---
 
