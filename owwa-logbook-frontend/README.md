@@ -45,7 +45,7 @@ Quick start:
 ```bash
 npm install
 cp .env.example .env   # optional — defaults to http://localhost:5000/api
-npm run dev              # starts on logbookowwa.vercel.app
+npm run dev              # starts on http://localhost:5173
 ```
 
 ## Pages
