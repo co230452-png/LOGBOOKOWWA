@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-gray-50 font-sans text-gray-900 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  /* OWWA Brand Button Styles */
+  .btn-primary {
+    @apply bg-blue-800 hover:bg-blue-900 text-white font-semibold py-2.5 px-5 rounded-lg
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600
+           focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed
+           active:scale-95 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-blue-800 border-2 border-blue-800
+           font-semibold py-2.5 px-5 rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500
+           focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+  }
+
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500
+           focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+  }
+
+  /* Form Input Styles */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           placeholder:text-gray-400 transition-all duration-200 text-sm;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+
+  /* Badge Styles */
+  .badge-pending {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-approved {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-green-100 text-green-800;
+  }
+
+  .badge-rejected {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-red-100 text-red-800;
+  }
+
+  /* Table Styles */
+  .table-header {
+    @apply px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-sm text-gray-700;
+  }
+
+  /* QR Scanner Styles */
+  #qr-reader {
+    width: 100% !important;
+    border: none !important;
+  }
+
+  #qr-reader__scan_region {
+    border: 3px solid #1e3a8a !important;
+    border-radius: 12px !important;
+  }
+
+  #qr-reader__dashboard {
+    padding: 8px 0 0 !important;
+  }
+
+  #qr-reader__dashboard_section_csr button {
+    @apply btn-primary !important;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+  }
+}
