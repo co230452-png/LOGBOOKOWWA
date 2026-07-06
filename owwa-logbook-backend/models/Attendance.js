@@ -8,29 +8,39 @@ const attendanceSchema = new mongoose.Schema(
       required: [true, 'User ID is required'],
     },
     date: {
-      type: String, // Stored as YYYY-MM-DD for easy deduplication
+      type: String, // YYYY-MM-DD
       required: true,
     },
-    timestamp: {
-      type: Date,
-      default: Date.now,
-    },
+    // Morning session
+    morningIn: { type: Date, default: null },
+    morningOut: { type: Date, default: null },
+    // Afternoon session
+    afternoonIn: { type: Date, default: null },
+    afternoonOut: { type: Date, default: null },
+    // Total minutes logged (computed on each scan)
+    totalMinutes: { type: Number, default: 0 },
     scannedBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User', // Admin who scanned
+      ref: 'User',
       default: null,
     },
-    notes: {
-      type: String,
-      default: '',
-    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-// Compound unique index: one attendance log per user per day
+// One record per user per day
 attendanceSchema.index({ userId: 1, date: 1 }, { unique: true });
+
+// Helper: recompute totalMinutes from the four time fields
+attendanceSchema.methods.computeTotal = function () {
+  let mins = 0;
+  if (this.morningIn && this.morningOut) {
+    mins += (this.morningOut - this.morningIn) / 60000;
+  }
+  if (this.afternoonIn && this.afternoonOut) {
+    mins += (this.afternoonOut - this.afternoonIn) / 60000;
+  }
+  this.totalMinutes = Math.round(mins);
+};
 
 module.exports = mongoose.model('Attendance', attendanceSchema);

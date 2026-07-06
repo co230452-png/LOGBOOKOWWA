@@ -114,7 +114,7 @@ const RegisterPage: React.FC = () => {
                       value={formData.firstName}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="First name"
+                      placeholder="Juan"
                       required
                     />
                   </div>
@@ -126,7 +126,7 @@ const RegisterPage: React.FC = () => {
                       value={formData.lastName}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="Family name"
+                      placeholder="Dela Cruz"
                       required
                     />
                   </div>
@@ -140,7 +140,7 @@ const RegisterPage: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="form-input"
-                    placeholder="Enter your email"
+                    placeholder="juan@email.com"
                     required
                   />
                 </div>

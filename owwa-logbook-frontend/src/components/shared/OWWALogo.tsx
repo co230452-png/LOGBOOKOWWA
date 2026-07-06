@@ -42,8 +42,8 @@ const OWWALogo: React.FC<OWWALogoProps> = ({ size = 'md', variant = 'full', clas
 
       {variant === 'full' && (
         <div className="flex flex-col leading-tight">
-          <span className={`${sizes[size].text} font-bold text-white`}>OWWA</span>
-          <span className={`${sizes[size].sub} text-white font-medium`}>Region IX</span>
+          <span className={`${sizes[size].text} font-bold text-blue-800`}>OWWA</span>
+          <span className={`${sizes[size].sub} text-gray-500 font-medium`}>Region IX</span>
         </div>
       )}
     </div>

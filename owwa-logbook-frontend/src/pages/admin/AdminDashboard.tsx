@@ -133,7 +133,7 @@ const AdminDashboard: React.FC = () => {
                 <tr>
                   <th className="table-header">Name</th>
                   <th className="table-header hidden sm:table-cell">OWWA ID</th>
-                  <th className="table-header">Time</th>
+                  <th className="table-header">AM In</th>
                   <th className="table-header hidden md:table-cell">Email</th>
                 </tr>
               </thead>
@@ -150,7 +150,7 @@ const AdminDashboard: React.FC = () => {
                     </td>
                     <td className="table-cell">
                       <span className="badge-approved">
-                        {format(new Date(record.timestamp), 'h:mm a')}
+                        {record.morningIn ? format(new Date(record.morningIn), "h:mm a") : "—"}
                       </span>
                     </td>
                     <td className="table-cell hidden md:table-cell text-gray-500 text-xs">

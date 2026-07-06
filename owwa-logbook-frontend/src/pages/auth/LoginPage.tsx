@@ -40,7 +40,11 @@ const LoginPage: React.FC = () => {
   }, [user, navigate]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-900 via-blue-800 to-blue-400 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex flex-col">
+      {/* Top Banner */}
+      <div className="bg-red-700 text-white text-center text-xs py-1.5 font-medium tracking-wide">
+        Republic of the Philippines — Overseas Workers Welfare Administration
+      </div>
 
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="w-full max-w-md animate-slide-up">
@@ -49,7 +53,7 @@ const LoginPage: React.FC = () => {
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-900 to-blue-700 px-8 py-8 text-center">
               <div className="flex justify-center mb-4">
-                <img src="/owwa-icon.jpg" alt="OWWA Logo" className="text-white h-[60px] rounded-full" />
+                <OWWALogo size="lg" className="text-white" />
               </div>
               <h1 className="text-white text-xl font-bold">Logbook System</h1>
               <p className="text-blue-200 text-sm mt-1">Region IX — Zamboanga Peninsula</p>
@@ -78,7 +82,7 @@ const LoginPage: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="form-input pl-10"
-                      placeholder="Enter your email"
+                      placeholder="you@email.com"
                       required
                       autoComplete="email"
                     />
@@ -135,7 +139,14 @@ const LoginPage: React.FC = () => {
             </div>
           </div>
 
-
+          {/* Demo Credentials */}
+          <div className="mt-4 bg-white/10 backdrop-blur rounded-xl p-4 text-white text-xs">
+            <p className="font-semibold mb-2 text-blue-200">Demo Credentials (after seeding):</p>
+            <div className="space-y-1 text-blue-100">
+              <p><span className="font-medium">Admin:</span> admin@owwa9.gov.ph / Admin@1234</p>
+              <p><span className="font-medium">User:</span> maria.santos@email.com / User@1234</p>
+            </div>
+          </div>
         </div>
       </div>
 

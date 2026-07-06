@@ -85,23 +85,30 @@
     @apply px-4 py-3 text-sm text-gray-700;
   }
 
-  /* QR Scanner Styles */
-  #qr-reader {
+  /* QR Scanner Styles — html5-qrcode lower-level API */
+  #qr-reader-inner {
     width: 100% !important;
     border: none !important;
   }
 
-  #qr-reader__scan_region {
-    border: 3px solid #1e3a8a !important;
-    border-radius: 12px !important;
+  #qr-reader-inner video {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    display: block !important;
   }
 
-  #qr-reader__dashboard {
-    padding: 8px 0 0 !important;
+  #qr-reader-inner__scan_region {
+    border: none !important;
+    background: transparent !important;
   }
 
-  #qr-reader__dashboard_section_csr button {
-    @apply btn-primary !important;
+  #qr-reader-inner__scan_region img {
+    display: none !important;
+  }
+
+  #qr-reader-inner canvas {
+    border: none !important;
   }
 }
 

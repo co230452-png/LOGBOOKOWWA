@@ -57,7 +57,7 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className="flex flex-col h-full">
       {/* Logo Header */}
       <div className="p-6 border-b border-gray-100">
-        <img src="/owwa-icon.jpg" alt="OWWA Logo" className="text-white h-[60px] rounded-full" />
+        <OWWALogo size="md" />
         <div className="flex items-center gap-1.5 mt-2">
           <Shield className="w-3.5 h-3.5 text-blue-800" />
           <p className="text-xs text-blue-800 font-semibold">Admin Panel</p>
@@ -120,7 +120,7 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {/* Mobile Header */}
         <header className="md:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-2">
-            <img src="/owwa-icon.jpg" alt="OWWA Logo" className="text-white h-[60px] rounded-full" />
+            <OWWALogo size="sm" />
             <span className="text-xs text-blue-800 font-semibold bg-blue-50 px-2 py-0.5 rounded">
               Admin
             </span>
